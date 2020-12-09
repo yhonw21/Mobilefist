@@ -1,0 +1,912 @@
+/* 
+1. Posicionamiento
+2. Modelo de caja (box-model)
+3. tipografia
+4. Visuales
+5. Otros
+*/
+
+:root{
+    /*Colores*/
+--bitcoin-orange: #f7931a;
+--soft-orange: #ffe9d5;
+--secondary-blue: #1a9af7;
+--soft-blue: #e7f5ff;
+--warm-black: #201e1c;
+--black: #201e1c;
+--grey: #bababa;
+--off-white: #faf8f7;
+--just-white: #fff;
+--gris-tabla: #242323;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+    ;
+}
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+
+header img{
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center;
+}
+
+.header--title-container{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 40px;
+    text-align: center;
+    align-self: center;
+}
+
+.header--title-container h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.header--title-container p{
+    margin-top: 25px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+
+.header--title-container .header--button{
+position: absolute;
+left: calc (50% - 118px);
+top: 270px;
+display: block;
+margin: 35px;
+padding: 15px;
+width: 229px;
+height: 48px;
+background-color: var(--off-white);
+/*Sombra*/
+box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+border: none;
+border-radius: 5px;
+font-size: 1.4rem;
+font-weight: bold;
+text-decoration: none;
+color: var(--black);
+
+}
+
+.header--button span{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url(/icons/Vector.svg);
+}
+
+main{
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+.main-exchange-container{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+
+}
+
+.main-exchange-container--title{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-exchange-container .backgroundimg{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url(/icons/Bitcoin.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-exchange-container h2{
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+
+.main-exchange-container p{
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+
+}
+
+/* tablas*/
+
+.main-currency-table{
+    width: 70%;
+    min-width: 350px;
+    max-width: 500px;
+    height: 360px;
+    margin:  0 auto;
+    font-family:"Inter", sans-serif;
+}
+
+.main-currency-table .currency-table--title{
+ margin-bottom: 15px;
+ font-size: 1.8rem;
+ font-weight: bold;
+ height: 2.3rem;
+color: var(--bitcoin-orange);
+}
+
+.main-currency-table .currency-table--container{
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.currency-table--container table{
+    width: 100%;
+    height: 100%;
+}
+
+.currency-table--container td{
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
+
+.currency-table--container .table__top-left{
+    border-radius: 15px 0 0 0;
+}
+
+.currency-table--container .table__top-right{
+    border-radius: 0 15px 0 0;
+}
+
+.currency-table--container .table__bottom-left{
+    border-radius: 0 0 0 15px;
+}
+
+.currency-table--container .table__bottom-right{
+    border-radius: 0 0 15px 0;
+}
+
+.currency-table--container .table__right {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+}
+
+.currency-table--container .bitcoin-down{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    margin-left: 10px;
+    background-image: url(/icons/trending-down\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container .ethereum-move {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    margin-left: 10px;
+    background-image: url(/icons/trending-up\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container .ripple-move {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    margin-left: 10px;
+    background-image: url(/icons/trending-down\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container .stellar-move {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    margin-left: 10px;
+    background-image: url(/icons/trending-down\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency__table-date{
+    width: max-content;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+}
+
+.currency__table-date p {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    color: var(--black);
+}
+
+/* inicio de tabla comisiones */
+
+main .table-two{
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+
+}
+
+.main-table-container-two{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+
+}
+
+.main-currency-table-two{
+    width: 70%;
+    min-width: 350px;
+    max-width: 500px;
+    height: 360px;
+    margin:  0 auto;
+    font-family:"Inter", sans-serif;
+}
+
+.main-currency-table-two .currency-table-title-two{
+ margin-bottom: 15px;
+ margin-top: 15px;
+ font-size: 1.8rem;
+ font-weight: bold;
+ height: 2.3rem;
+color: #1A9AF7;
+}
+
+.main-currency-table-two .currency-table-container-two{
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.currency-table-container-two table{
+    width: 100%;
+    height: 100%;
+}
+
+.currency-table-container-two td{
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
+
+.currency-table-container-two .table__top-left-two{
+    border-radius: 15px 0 0 0;
+}
+
+.currency-table-container-two .table__top-right-two{
+    border-radius: 0 15px 0 0;
+}
+
+.currency-table-container-two .table__bottom-left-two{
+    border-radius: 0 0 0 15px;
+}
+
+.currency-table--container .table__bottom-right{
+    border-radius: 0 0 15px 0;
+}
+
+.currency-table-container-two .table__right-two {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+}
+
+/* ver si van las variables de iconos*/
+
+.currency__table-date-two td{
+    width: max-content;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+}
+
+.currency__table-date-two p {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    color: var(--black);
+}
+
+/* inicio section beneficios*/
+
+/* Inicio sección de beneficios */
+.main-product-detail{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--warm-black);
+
+}
+
+.product-detail--batata-logo {
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    top: -10px;
+    left: calc(50% - 20px);
+    background-image: url(/icons/Batatalogo.png)
+}
+
+.product-detail--title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    color:var(--just-white);
+}
+
+.main-product-detail h2{
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.product-detail--title p{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+.product-detail--card{
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--gris-tabla);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16)
+
+}
+
+.product-detail--card .clock{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url(/icons/clock1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product--card-title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+
+
+.product--card-body{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+/* ¨fin primera sección de beneficios */
+
+
+/* ¨Inicio segunda sección de beneficios */
+.product-detail--card2{
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--gris-tabla);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16)
+
+}
+.product--card-title2 h3{
+    font-size: 10px;
+}
+
+.product-detail--card2 .eyes{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url(/icons/eye1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product--card-title2{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+
+
+.product--card-body2{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+/* ¨fin segunda sección de beneficios */
+
+/* ¨Inicio tercera sección de beneficios */
+.product-detail--card3{
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--gris-tabla);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16)
+
+}
+
+.product-detail--card3 .cost{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url(/icons/dollar-sign1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product--card-title3{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+
+
+.product--card-body3{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+/* ¨fin tercera sección de beneficios */
+
+/* ¨Inicio cuarta sección de beneficios */
+.product-detail--card4{
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--gris-tabla);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16)
+
+}
+
+.product-detail--card4 .check{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url(/icons/check-circle1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product--card-title4{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+
+
+.product--card-body4{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+/* ¨fin cuarta sección de beneficios */
+
+/* ¨inicio beneficios */
+.bitcoin-img-container{
+    width: 100%;
+    min-width: 320px;
+    height: 50vh;
+    background-image: url("/imgs/bitcoinbaby\ 1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bitcoin-img-container h2{
+    padding-top: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+    text-align: center;
+}
+
+/*inicio tarjeta planes*/
+
+.main-plans-container{
+width: 100%;
+min-width: 320px;
+padding-bottom: 70px;
+text-align: center;
+}
+
+.plans-title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    marging: 0 auto;
+    margin-bottom: 50px;
+}
+
+.plans-title h2{
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+
+.plans-title p{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+.plans-container--slider{
+    display: flex;
+    gap: 50px;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+
+}
+
+.plans-container--card{
+    position: relative;
+    scroll-snap-aling: center;
+    width: 70%;
+    min-width: 290px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 5px 0;
+    padding: 0 15px;
+    background-color: rgba(196, 139, 125, 0.521);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.recommended {
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    left: calc(50% - 60px);
+    padding: 6px;
+    top: -15px;
+    font-size: 1.2rem;
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    color: var(--just-white);
+
+}
+
+.plan-card-title{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.plan-card-price{
+    padding: 5px 0 ;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: black;
+
+}
+
+.plan-card-price span{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.plan-card-saving{
+    font-size: 1.2rem;
+    color: #757575;
+}
+
+.plan-card--ca{
+    width: 150px;
+    height: 48px;
+    marging-top: 20px;
+    background-color: #faf8f7;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+
+}
+
+.plan-card--ca span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(/icons/arrow-right.png);
+    vertical-align: text-bottom;
+}
+
+/*fin tarjeta planes*/
+
+/*inicio 2da tarjeta planes*/
+.plans-container--card2{
+    position: relative;
+    width: 70%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px auto 0;
+    padding: 0 15px;
+    background-color: rgba(235, 163, 57, 0.521);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+
+.plan-card-title2{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.plan-card-price2{
+    padding: 5px 0 ;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: black;
+
+}
+
+.plan-card-price2 span{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.plan-card-saving2{
+    font-size: 1.2rem;
+    color: #757575;
+}
+
+.plan-card--ca2{
+    width: 150px;
+    height: 48px;
+    marging-top: 20px;
+    background-color: #faf8f7;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+
+}
+
+.plan-card--ca2 span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(/icons/arrow-right.png);
+    vertical-align: text-bottom;
+}
+/*fin 2da tarjeta planes*/
+
+/*inicio 3era tarjeta planes*/
+.plans-container--card3{
+    position: relative;
+    width: 70%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px auto 0;
+    padding: 0 15px;
+    background-color: rgba(182, 229, 218, 0.938);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+
+
+.plan-card-title3{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.plan-card-price3{
+    padding: 5px 0 ;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: black;
+
+}
+
+.plan-card-price3 span{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.plan-card-saving3{
+    font-size: 1.2rem;
+    color: #757575;
+}
+
+.plan-card--ca3{
+    width: 150px;
+    height: 48px;
+    marging-top: 20px;
+    background-color: #faf8f7;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+
+}
+
+.plan-card--ca3 span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(/icons/arrow-right.png);
+    vertical-align: text-bottom;
+}
+/*fin 3era tarjeta planes*/
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+
+}
+
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul{
+font-size: 1.4rem;
+font-weight: 500;
+line-height: 1.8rem;
+list-style: none;
+}
+
+.left li{
+    margin: 10px 0 ;
+}
+
+.left a{
+    text-decoration: none;
+    color: var(--just-white)
+}
